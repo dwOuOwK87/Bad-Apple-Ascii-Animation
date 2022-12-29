@@ -1,7 +1,6 @@
 # Bad-Apple-Ascii-Animation
 
-Unzip clips.rar and click start.py
+Click start.py to start animation.  
 
-Need python3 and opencv
-
-Install opencv: pip install opencv-python
+**Need python3 and opencv**
+>Install opencv: pip install opencv-python
