@@ -18,9 +18,9 @@ For people who just want to easily use, exe file [here](https://drive.google.com
 >I'll easily talk about how I made this.  
 >Thanks to opencv since it helped me make it simpler.  
 >By the way, forgiving my incomprehensible English XD. After all, I am not a native English speaker. Most sentences come from google translate.  
->And ugly images come form MS paint.
 
 To make the program read the video, we need to split it to images frame by frame.  
+I used VideoCapture class to let me easy to split.
 ```
 capturer = cv2.VideoCapture(video_path)
 while capturer.isOpened():
@@ -29,7 +29,8 @@ while capturer.isOpened():
                 break
         ...
 ```  
-And we process the image during spliting it, make it gray and resized.  
+And we make the image gray and resized during spliting it.  
+cvtColor and resize method are both powerful tools.
 ```
 processed_image = cv2.cvtColor(
                   cv2.resize(frame_image, scale, interpolation=cv2.INTER_AREA),
@@ -41,7 +42,8 @@ After we got processed image list, we print it out pixel by pixel in a image by 
 space = int(256 / length of the ASCII sheet)
 index = int(a pixel in frame / space)
 ```
-Use the formula, and compare the index with that in the ASCII sheet: (".", "+", "=", "#", "%", "$", "@", "M"), like following code.
+Use the formula, and compare the index with that in the ASCII sheet: (".", "+", "=", "#", "%", "$", "@", "M"),  
+Like following code:
 ```
 image_string = ""
 for i in range(row):
