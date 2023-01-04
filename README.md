@@ -1,8 +1,8 @@
 ## Bad-Apple-Ascii-Animation
 
 **Tips**
->Clicking "start.py" can start the animation.
->The program will ask you the scale of ASCII animation.
+>Clicking "start.py" can start the animation.  
+>The program will ask you the scale of ASCII animation.  
 >I recommend you not to set it higher than 100 both width and height, and set to the same ratio as the original video.
 
 **Need python3 and opencv**
