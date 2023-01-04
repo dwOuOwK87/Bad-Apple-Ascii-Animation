@@ -24,10 +24,10 @@ To make the program read the video, we need to split it to images frame by frame
 ```
 capturer = cv2.VideoCapture(video_path)
 while capturer.isOpened():
-    is_reading, frame_image = capturer.read()
-    if is_reading == False:
-        break
-    #process
+        is_reading, frame_image = capturer.read()
+        if is_reading == False:
+                break
+        ...
 ```  
 And we process the image during spliting it, make it gray and resized.  
 ```
@@ -36,18 +36,24 @@ processed_image = cv2.cvtColor(
                   cv2.COLOR_RGB2GRAY
                   )
 ```
-![alt 001](/image/001.png)
-
-
-
 After we got processed image list, we print it out pixel by pixel in a image by using the formula.
 ```
 space = int(256 / length of the ASCII sheet)
 index = int(a pixel in frame / space)
 ```
-Then compare the index with that in the ASCII sheet: (".", "+", "=", "#", "%", "$", "@", "M")  
-![alt 002](/image/002.png)
-
-
-
-Then print the video image by image!, done!
+Use the formula, and compare the index with that in the ASCII sheet: (".", "+", "=", "#", "%", "$", "@", "M"), like following code.
+```
+image_string = ""
+for i in range(row):
+        for j in range(col):
+                index = image[i][j] // (256//len(ascii_sheet))
+                image_string += ascii_sheet[index] + " "
+        image_string += "\n"
+print(image_string, end="")
+```
+Then print the video image by image.
+```
+for image in image_array:
+        print_ascii_image(image, ascii_sheet)
+```
+Done!
