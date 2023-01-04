@@ -17,7 +17,8 @@ For people who just want to easily use, exe file [here](https://drive.google.com
 ##How to make this
 I'll easily talk about how I made this.  
 Thanks to opencv since it helped me make it simpler.  
-By the way, forgiving my incomprehensible English XD. After all, I am not a native English speaker. Most sentences come from google translate.
+By the way, forgiving my incomprehensible English XD. After all, I am not a native English speaker. Most sentences come from google translate.  
+And ugly images come form MS paint.
 
 To make the program read the video, we need to split it to images frame by frame.  
 ```
@@ -35,7 +36,7 @@ processed_image = cv2.cvtColor(
                   cv2.COLOR_RGB2GRAY
                   )
 ```
-![alt 001](https://drive.google.com/file/d/1DBcR67ENtGF4ZD7M7kfbdiHhFhfIkPne/view?usp=share_link)   
+![alt 001](/image/001.png)   
 
 After we got processed image list, we print it out pixel by pixel in a image by using the formula.
 ```
@@ -43,6 +44,6 @@ space = int(256 / length of the ASCII sheet)
 index = int(a pixel in frame / space)
 ```
 Then compare the index with that in the ASCII sheet: (".", "+", "=", "#", "%", "$", "@", "M")  
-![alt 002](https://drive.google.com/file/d/1slBDgRZy4ry1bxTj99iXIS8urlG7XlQ7/view?usp=share_link)  
+![alt 002](/image/002.png)  
 
 Then print the video image by image!, done!
