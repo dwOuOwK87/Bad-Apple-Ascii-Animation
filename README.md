@@ -11,4 +11,5 @@
 **Links**
 >[Video here.](https://youtu.be/kolcMueYQMw)  
 >For people who just want to easily use, exe file [here](https://drive.google.com/drive/folders/10Mv6SztT0jr-yEC20ksxw8jAXGUmQwd9?usp=sharing).  
->~~The exe file is too big as fuck to put it right here lol.~~
+
+
