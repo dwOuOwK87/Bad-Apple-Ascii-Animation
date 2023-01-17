@@ -39,7 +39,7 @@ processed_image = cv2.cvtColor(
 ```
 After we got processed image list, we print it out pixel by pixel in a image by using the formula.
 ```
-space = int(256 / length of the ASCII sheet)
+space = ceiling(256 / length of the ASCII sheet)
 index = int(a pixel in frame / space)
 ```
 Use the formula, and compare the index with that in the ASCII sheet: (".", "+", "=", "#", "%", "$", "@", "M"),  
@@ -48,7 +48,7 @@ Like following code:
 image_string = ""
 for i in range(row):
         for j in range(col):
-                index = image[i][j] // (256//len(ascii_sheet))
+                index = int(image[i][j] / math.ceil(256/len(ascii_sheet)))
                 image_string += ascii_sheet[index] + " "
         image_string += "\n"
 print(image_string, end="")
