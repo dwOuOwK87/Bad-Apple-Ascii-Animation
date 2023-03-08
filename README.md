@@ -12,8 +12,6 @@ pip install opencv-python
 
 ## Links
 [Video here.](https://youtu.be/kolcMueYQMw)  
-For people who just want to easily use, exe file [here](https://drive.google.com/drive/folders/10Mv6SztT0jr-yEC20ksxw8jAXGUmQwd9?usp=sharing).  
-Download "Converter1.exe" and just open it.
 
 ## How to make this
 >I'll easily talk about how I made this.  
